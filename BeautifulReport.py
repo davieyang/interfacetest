@@ -57,7 +57,7 @@ FIELDS = {
 
 class PATH:
     """ all file PATH meta """
-    config_tmp_path = 'D:\\interfacetest\\template'
+    config_tmp_path = 'D:\\interfacetest\\template\\template'
 
 
 class MakeResultJson:
@@ -335,10 +335,10 @@ class BeautifulReport(ReportTestResult, PATH):
         self.title = '自动化测试报告'
         self.filename = 'report.html'
 
-    def report(self, description, filename: str = None, log_path='.'):
+    def report(self, description, filename: str = None, report_path='.'):
         """
         生成测试报告,并放在当前运行路径下
-        :param log_path: 生成report的文件存储路径
+        :param report_path: 生成report的文件存储路径
         :param filename: 生成文件的filename
         :param description: 生成文件的注释
         :return:
@@ -349,7 +349,7 @@ class BeautifulReport(ReportTestResult, PATH):
         if description:
             self.title = description
         
-        self.log_path = os.path.abspath(log_path)
+        self.log_path = os.path.abspath(report_path)
         self.suites.run(result=self)
         self.stopTestRun(self.title)
         self.output_report()
