@@ -6,7 +6,7 @@ __mtime__ = '2018/4/21'
 """
 import time
 import logging
-from config.VarConfig import parentDirPath
+from configuration.VarConfig import parentDirPath
 
 
 class Logger(object):
