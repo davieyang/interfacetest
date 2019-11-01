@@ -88,8 +88,8 @@ class AESTest(unittest.TestCase):
         result = r.json()
         self.assertEqual(result['status'], 200)
         self.assertEqual(result['message'], 'success')
-        self.assertEqual(result['data']['realname'],'alen')
-        self.assertEqual(result['data']['phone'],'18633003301')
+        self.assertEqual(result['data']['realname'], 'alen')
+        self.assertEqual(result['data']['phone'], '18633003301')
 
 
 if __name__ == '__main__':

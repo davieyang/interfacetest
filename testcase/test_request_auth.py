@@ -60,8 +60,8 @@ class GetEventListTest(unittest.TestCase):
         result = r.json()
         self.assertEqual(result['status'], 200)
         self.assertEqual(result['message'], 'success')
-        self.assertEqual(result['data'][0]['name'],u'mx6发布会')
-        self.assertEqual(result['data'][0]['address'],u'北京国家会议中心')
+        self.assertEqual(result['data'][0]['name'], u'mx6发布会')
+        self.assertEqual(result['data'][0]['address'], u'北京国家会议中心')
 
 
 if __name__ == '__main__':
